@@ -24,6 +24,8 @@ class CounterController {
 
   // カウンターを増加
   void countUp() {
+    // この update は、以下と同じ動作をする
+    // _read(countState.notifier).state = _read(countState) + 1;
     _read(countState.notifier).update((s) => s + 1);
   }
 
